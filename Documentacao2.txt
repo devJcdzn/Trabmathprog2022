@@ -1,0 +1,20 @@
+    Esse problema pode ser resolvido simplesmente substituindo os números na fórmula geral dada, 
+mas definitivamente há alguma otimização que pode ser feita para minimizar o tempo
+de execução. Por exemplo, B tinha que ser um número primo positivo, porque inserir n = 0 
+resultaria em B sendo o primeiro número, o que significa que ele tem que ser primo.
+A geralmente tinha que ser ímpar, a menos que B fosse 2.
+
+    Então para resolver vamos simplesmente criar um detector de primos, e em seguida,
+uma lista para armazenar os tais. Usando a simples estrutura de repetição 'for' a gente conse-
+gue simplesmente pegar os primos de -999 a 999 atravé da função detectora criada antes.
+Criamos uma simples variável apelidada 'longest', vai receber 0 como valor, ela vai definir
+o break de nosso loop.
+    Usando o for novamente dessa vez apelidando o elemento a ser checado de 'a', no mesmo range
+-999 a 999, repetindo o for dessa vez para b nos intervalos de primos definidos pela nossa lista.
+definimos n=0 para ser usada no termo geral dado pelo problema, e criamos uma variável para arma-
+zenar esse termo 'term'. Usando o while dessa ver, para ser mais prático, enquanto a função de pri-
+mos em relação ao nosso termo afirmar o que estiver abaixo, que vai ser o teste de n no termo geral
+para ver se gera um primo, julgado pela função feita, n vai aumentar seu valor em 1, para provarmos a
+eficiência da fórmula pelo princípio de indução.
+    Depois verificamos se n passou o valor de longest, ou seja, chegou a 1, quando isso ocorrer, ele 
+armezena o maior valor de a e de b em que o termo executou com êxito o seu propósito, e imprime na tela.
